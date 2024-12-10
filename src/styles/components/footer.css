@@ -1,0 +1,9 @@
+.footer {
+  color: var(--_clr-neutral-100);
+  background-color: var(--clr-footer-bg);
+  height: 360px;
+
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}

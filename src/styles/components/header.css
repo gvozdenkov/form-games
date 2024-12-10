@@ -1,0 +1,9 @@
+.header {
+  color: var(--_clr-neutral-100);
+  background-color: var(--clr-accent);
+  height: 450px;
+
+  display: grid;
+  place-items: center;
+  font-size: 30px;
+}

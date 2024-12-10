@@ -1,0 +1,39 @@
+.layout {
+  --gutter: 24px;
+  --max-content-width: 1280px;
+
+  display: grid;
+  grid-template-columns:
+    [fullbleed-start]
+    minmax(var(--gutter), 1fr)
+    [cutout-start]
+    1fr
+    [main-start]
+    min(100% - var(--gutter) * 2, var(--max-content-width))
+    [main-end]
+    1fr
+    [cutout-end]
+    minmax(var(--gutter), 1fr)
+    [fullbleed-end];
+
+  grid-template-rows: min-content 1fr min-content;
+}
+
+.layout > * {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: fullbleed;
+}
+
+.content {
+  display: grid;
+  grid-column: main;
+}
+
+.full-width {
+  grid-column: fullbleed;
+}
+
+.main-width {
+  grid-column: main;
+}
