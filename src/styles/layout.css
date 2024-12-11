@@ -37,3 +37,9 @@
 .main-width {
   grid-column: main;
 }
+
+@media (width >= 768px) {
+  .layout {
+    --gutter: 40px;
+  }
+}
