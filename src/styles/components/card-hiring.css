@@ -1,0 +1,75 @@
+.card-hiring {
+  background-color: var(--clr-accent);
+  border-radius: var(--border-radius);
+  padding: 20px 16px 24px 16px;
+
+  display: grid;
+  justify-items: center;
+  grid-template:
+    'img'
+    '.' 20px
+    'title'
+    '.' 16px
+    'description'
+    '.' 32px
+    'btn'
+    / 1fr;
+}
+
+.card-hiring__title {
+  grid-area: title;
+  text-align: center;
+}
+
+.card-hiring__description {
+  grid-area: description;
+  text-align: center;
+}
+
+.card-hiring__btn {
+  grid-area: btn;
+}
+
+.card-hiring__img {
+  grid-area: img;
+}
+
+@media (width >= 768px) {
+  .card-hiring {
+    padding: 60px;
+
+    grid-template:
+      'img'
+      '.' 32px
+      'title'
+      '.' 32px
+      'description'
+      '.' 48px
+      'btn'
+      / 1fr;
+  }
+}
+
+@media (width >= 1024px) {
+  .card-hiring {
+    grid-template:
+      'title . img'
+      '. . img' 32px
+      'description . img'
+      '. . img' auto
+      'btn . img'
+      / 1fr auto 1fr;
+  }
+
+  .card-hiring__title {
+    text-align: left;
+  }
+
+  .card-hiring__description {
+    text-align: left;
+  }
+
+  .card-hiring__btn {
+    place-self: start;
+  }
+}

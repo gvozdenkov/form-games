@@ -11,6 +11,20 @@
   --clr-text: var(--_clr-neutral-900);
   --clr-accent: var(--_clr-purple-400);
   --clr-footer-bg: var(--_clr-neutral-900);
+  --clr-btn-bg: var(--_clr-neutral-900);
+  --clr-btn-bg-accent: var(--_clr-purple-400);
+  --clr-btn-text: var(--_clr-neutral-100);
+  --clr-btn-text-accent: var(--_clr-neutral-100);
+  --clr-input-bg: var(--_clr-neutral-100);
+  --clr-input-bg-hover: var(--_clr-grey-75);
+
+  --clr-input-placeholder: var(--_clr-grey-100);
+
+  --input-heigth: 44px;
+
+  --border-radius: 16px;
+  --border-radius-sm: 8px;
+  --transition: 250ms ease-out;
 
   color: var(--clr-paragraph);
   background-color: var(--clr-bg);

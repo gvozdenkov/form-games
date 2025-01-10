@@ -9,9 +9,41 @@
   </head>
   <body class="layout">
     <header class="header">
-      <div class="main-width">
-        <h1>header filters here</h1>
-      </div>
+      <a href="#" class="back-button mb-1"></a>
+      <h1 class="header__title">Open new horizons</h1>
+      <form class="header__form" action="">
+        <input type="text" class="input" placeholder="Job title or keywords" />
+
+        <div class="custom-select" id="select-department">
+          <input type="text" name="department" value="jjj" id="" hidden />
+          <button class="custom-select__button input-text input-text_placeholder" type="button">
+            Departments
+          </button>
+          <ul class="custom-select__dropdown input-text">
+            <li class="custom-select__dropdown-item">All vacancies</li>
+            <li class="custom-select__dropdown-item">Analytics</li>
+            <li class="custom-select__dropdown-item">Commercial</li>
+            <li class="custom-select__dropdown-item">Customer Operations</li>
+            <li class="custom-select__dropdown-item">Engineering</li>
+            <li class="custom-select__dropdown-item">Finance and Legal</li>
+          </ul>
+        </div>
+        <div class="custom-select" id="select-contry">
+          <button class="custom-select__button input-text input-text_placeholder" type="button">
+            Country
+          </button>
+          <ul class="custom-select__dropdown input-text">
+            <li class="custom-select__dropdown-item custom-select__dropdown-item_selected">
+              GitHub
+            </li>
+            <li class="custom-select__dropdown-item">Instagram</li>
+            <li class="custom-select__dropdown-item">Facebook</li>
+            <li class="custom-select__dropdown-item">LinkedIn</li>
+            <li class="custom-select__dropdown-item">Twitter</li>
+            <li class="custom-select__dropdown-item">Reddit</li>
+          </ul>
+        </div>
+      </form>
     </header>
     <main class="content">
       <section id="vacancy-list" class="vacancy-list">
@@ -55,12 +87,22 @@
       </section>
 
       <!-- We are waiting for you -->
-      <section class="tell-about"></section>
+      <section>
+        <article class="card-hiring">
+          <h2 class="title card-hiring__title">We are waiting for you</h2>
+          <p class="paragraph card-hiring__description">
+            Because we have a lot of opportunities waiting for you to take advantage of them
+          </p>
+          <button class="button card-hiring__btn">Tell about yourself</button>
+          <img src="/images/hiring-card-img.svg" alt="" class="card-hiring__img" aria-hidden="" />
+        </article>
+      </section>
     </main>
     <footer class="footer">
       <div class="main-width">
         <p>footer menu here</p>
       </div>
     </footer>
+    <script src="custom-select.js" type="module"></script>
   </body>
 </html>

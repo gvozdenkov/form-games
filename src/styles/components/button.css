@@ -1,0 +1,35 @@
+.button {
+  --height: 42px;
+  --fz: 14px;
+  --lh: 1.43;
+  --bg: var(--clr-btn-bg);
+  --text: var(--clr-btn-text);
+
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: var(--fz);
+  font-weight: 500;
+  line-height: var(--lh);
+  border: 0;
+  border-radius: 500px;
+  height: var(--height);
+  background-color: var(--bg);
+  color: var(--text);
+  padding: 1.125em 2em;
+  transition: var(--transition);
+}
+
+.button_type_accent {
+  --bg: var(--clr-btn-bg-accent);
+  --text: var(--clr-btn-text-accent);
+}
+
+@media (width >= 768px) {
+  .button {
+    --height: 60px;
+    --fz: 20px;
+    --lh: 1.4;
+  }
+}

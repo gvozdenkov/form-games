@@ -1,9 +1,31 @@
 .header {
-  color: var(--_clr-neutral-100);
+  --menu-height: 56px;
+
+  color: var(--_clr-neutral-900);
   background-color: var(--clr-accent);
-  height: 450px;
+  min-height: 514px;
 
   display: grid;
-  place-items: center;
-  font-size: 30px;
+  align-content: start;
+
+  padding-block: calc(var(--menu-height) + 32px) 48px;
+
+  > * {
+    grid-column: 2 / -2;
+  }
+}
+
+.header__title {
+  font-size: 57px;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+}
+
+.header__form {
+  display: block;
+  gap: 8px;
+}
+
+.header__form > *:not(:first-child) {
+  margin-block-start: 8px;
 }

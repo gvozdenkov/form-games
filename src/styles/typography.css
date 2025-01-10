@@ -1,0 +1,25 @@
+.title {
+  font-size: 40px;
+  line-height: 0.92;
+  font-weight: 400;
+}
+
+.paragraph {
+  font-size: 14px;
+  line-height: 1.43;
+  font-weight: 400;
+}
+
+@media (width >= 768px) {
+  .title {
+    font-size: 86px;
+    line-height: 0.75;
+    font-weight: 400;
+  }
+
+  .paragraph {
+    font-size: 20px;
+    line-height: 1.4;
+    font-weight: 400;
+  }
+}
