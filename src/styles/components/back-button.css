@@ -13,5 +13,5 @@
   mask-size: 35px 13px;
   transform: scale(-1, 1);
   background-color: var(--clr-text);
-  transition: var(--transition);
+  transition: var(--transition-md);
 }

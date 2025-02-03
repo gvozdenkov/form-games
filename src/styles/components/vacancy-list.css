@@ -3,7 +3,7 @@
 }
 
 .vacancy-list__item {
-  --transition: 250ms ease-out;
+  --transition-md: 250ms ease-out;
   --title-fz: 24px;
   --title-lh: 1.25;
   --tag-fz: 14px;
@@ -17,7 +17,7 @@
   position: relative;
   left: calc(var(--hover-inline-padding) * -1);
 
-  transition: var(--transition);
+  transition: var(--transition-md);
 }
 
 .vacancy-list__item::before {
@@ -26,7 +26,7 @@
   height: 1px;
   width: 100%;
   background-color: var(--_clr-grey-75);
-  transition: var(--transition);
+  transition: var(--transition-md);
 }
 
 /* disable dividers on hover */
@@ -69,7 +69,7 @@
   font-size: var(--title-fz);
   line-height: var(--title-lh);
   font-weight: 400;
-  transition: var(--transition);
+  transition: var(--transition-md);
 }
 
 /* job tags styles */
@@ -112,7 +112,7 @@
   place-self: center;
   mask: no-repeat center / contain url('/images/icons/arrow.svg');
   background-color: var(--clr-text);
-  transition: var(--transition);
+  transition: var(--transition-md);
 }
 
 @media (width >= 600px) {

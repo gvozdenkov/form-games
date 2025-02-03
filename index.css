@@ -3,4 +3,5 @@
 @import url(./src/styles/utils.css);
 @import url(./src/styles/typography.css);
 @import url(./src/styles/layout.css);
+@import url(./src/styles/general.css);
 @import url(./src/styles/components/index.css);
