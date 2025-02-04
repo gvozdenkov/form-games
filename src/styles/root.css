@@ -65,7 +65,7 @@
   /* sizing */
   --step-8: clamp(1rem, 0.2857rem + 3.5714vw, 2rem);
 
-  --ff-primary: system-ui, sans-serif;
+  --ff-primary: 'Aeroport', sans-serif;
 }
 
 body {
