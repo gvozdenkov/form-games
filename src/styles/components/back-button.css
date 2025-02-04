@@ -12,6 +12,6 @@
   mask: no-repeat center / contain url(../../../public/images/icons/arrow.svg);
   mask-size: 35px 13px;
   transform: scale(-1, 1);
-  background-color: var(--clr-text);
+  background-color: var(--clr-fg);
   transition: var(--transition-md);
 }

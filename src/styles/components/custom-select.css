@@ -30,7 +30,7 @@
 }
 
 .custom-select__button_selected {
-  color: var(--clr-text);
+  color: var(--clr-fg);
 }
 
 .custom-select__button::after {
@@ -39,7 +39,7 @@
   height: 24px;
   mask: no-repeat center / contain url(../../../public/images/icons/caret.svg);
   rotate: 180deg;
-  background-color: var(--clr-text);
+  background-color: var(--clr-fg);
   transition: var(--transition-md);
   pointer-events: none;
 }
@@ -100,7 +100,7 @@
   width: 24px;
   height: 24px;
   mask: no-repeat center / contain url(../../../public/images/icons/check.svg);
-  background-color: var(--clr-text);
+  background-color: var(--clr-fg);
   transition: var(--transition-md);
   pointer-events: none;
 }

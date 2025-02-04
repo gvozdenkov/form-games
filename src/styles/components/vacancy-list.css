@@ -4,10 +4,6 @@
 
 .vacancy-list__item {
   --transition-md: 250ms ease-out;
-  --title-fz: 24px;
-  --title-lh: 1.25;
-  --tag-fz: 14px;
-  --tag-lh: 1.43;
   --tag-dot-size: 2px;
   --hover-inline-padding: 14px;
 
@@ -66,9 +62,6 @@
 
   /* job title styles */
   grid-area: title;
-  font-size: var(--title-fz);
-  line-height: var(--title-lh);
-  font-weight: 400;
   transition: var(--transition-md);
 }
 
@@ -82,9 +75,6 @@
   gap: calc(var(--gap) / 2);
   row-gap: 4px;
 
-  font-size: var(--tag-fz);
-  line-height: var(--tag-lh);
-  font-weight: 400;
   color: var(--_clr-grey-100);
   list-style-type: disc;
 
@@ -111,16 +101,12 @@
   place-self: stretch;
   place-self: center;
   mask: no-repeat center / contain url('/images/icons/arrow.svg');
-  background-color: var(--clr-text);
+  background-color: var(--clr-fg);
   transition: var(--transition-md);
 }
 
 @media (width >= 600px) {
   .vacancy-list__item {
-    --title-fz: 32px;
-    --title-lh: 1;
-    --tag-fz: 20px;
-    --tag-lh: 1.4;
     --tag-dot-size: 3px;
   }
   .vacancy-list__arrow {

@@ -16,28 +16,23 @@
   --_clr-red-50: #ffc1bb;
   --_clr-red-25: #ffe0dd;
 
-  --_clr-neutral-900: #000;
-  --_clr-neutral-100: #fff;
-  --_clr-grey-100: #8a90b3;
-  --_clr-grey-75: #d1d5ed;
-  --_clr-grey-50: #e8eaf6;
-  --_clr-red-25: #ffe0dd;
-  --_clr-red-75: #ff8278;
-  --_clr-red-100: #ff3828;
-  --_clr-green-25: #e1ffdd;
-
   --clr-accent: var(--_clr-violet);
 
   --clr-hover: #e8eaf680;
-  --clr-bg: var(--_clr-neutral-100);
-  --clr-text: var(--_clr-neutral-900);
-  --clr-btn-bg: var(--_clr-neutral-900);
+  --clr-bg: var(--_clr-white);
+  --clr-fg: var(--_clr-black);
+
+  /* buttons */
+  --clr-btn-bg: var(---_clr-black);
   --clr-btn-bg-accent: var(--_clr-violet);
-  --clr-btn-text: var(--_clr-neutral-100);
-  --clr-btn-text-accent: var(--_clr-neutral-100);
-  --clr-select-bg: var(--_clr-neutral-100);
+  --clr-btn-text: var(--_clr-white);
+  --clr-btn-text-accent: var(--_clr-white);
+
+  /* form */
+  --clr-select-bg: var(--_clr-white);
   --clr-select-bg-hover: var(--_clr-grey-75);
   --clr-select-placeholder: var(--_clr-grey-100);
+
   --clr-input-bg: var(--_clr-grey-50);
   --clr-input-bg-error: var(--_clr-red-25);
   --clr-input-bg-valid: var(--_clr-red-25);
@@ -45,8 +40,8 @@
   --clr-input-bg-hover: var(--_clr-grey-75);
   --clr-input-placeholder: var(--_clr-grey-100);
   --clr-input-placeholder-error: var(--_clr-red-75);
-  --clr-input-input-tooltip-bg: var(--_clr-neutral-900);
-  --clr-input-input-tooltip-fg: var(--_clr-neutral-100);
+  --clr-input-input-tooltip-bg: var(---_clr-black);
+  --clr-input-input-tooltip-fg: var(--_clr-white);
 
   /* footer */
   --clr-footer-bg: var(--_clr-black);
@@ -71,9 +66,10 @@
 body {
   min-height: 100dvh;
   font-family: var(--ff-primary);
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: clamp(1.25rem, 1.5179rem + -1.3393vw, 0.875rem);
   font-weight: var(--fw-400);
+  line-height: 1.4;
+  letter-spacing: 0;
   color: var(--clr-paragraph);
   background-color: var(--clr-bg);
   font-synthesis: none;
@@ -83,5 +79,9 @@ body {
 @media (width > 650px) {
   :root {
     --input-heigth: 3.75rem;
+  }
+
+  body {
+    line-height: 1.43;
   }
 }
