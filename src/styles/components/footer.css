@@ -1,9 +1,134 @@
 .footer {
-  color: var(--_clr-neutral-100);
-  background-color: var(--clr-footer-bg);
-  height: 360px;
+  --flow-spacer: 0.75rem;
 
+  color: var(--clr-footer-fg);
+  background-color: var(--clr-footer-bg);
+  padding-block: 2rem;
+
+  font-size: 1rem;
+  line-height: 1.375;
+
+  a {
+    display: block;
+    font-size: 0.875rem;
+    line-height: 1.2;
+    color: var(--clr-footer-fg);
+    transition: var(--transition-sm);
+
+    &:hover {
+      color: var(--clr-accent);
+    }
+  }
+
+  > * {
+    display: grid;
+    gap: 4.375rem;
+    align-items: start;
+  }
+}
+
+.footer__contacts {
+  a {
+    color: var(--clr-accent);
+    transition: var(--transition-sm);
+
+    &:hover {
+      color: var(--clr-footer-fg);
+    }
+  }
+}
+
+.footer__social-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-block-start: 1.25rem;
+}
+
+.footer__nav {
   display: grid;
-  place-items: center;
-  font-size: 30px;
+  grid-auto-flow: column;
+  gap: 1.375rem;
+
+  > :last-child {
+    display: none;
+  }
+}
+
+.footer__logo {
+  > p {
+    font-size: 1.125rem;
+    line-height: 1;
+    color: #bfbfbf;
+  }
+}
+
+.footer__privacy {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (width >= 768px) {
+  .footer {
+    --flow-spacer: 0.5rem;
+
+    font-size: 1.25rem;
+    line-height: 1.35;
+
+    a {
+      font-size: 1.125rem;
+      line-height: 1;
+    }
+
+    > * {
+      gap: 2.5rem;
+    }
+  }
+
+  .footer__contacts {
+    max-inline-size: 24rem;
+  }
+
+  .footer__nav {
+    > *:last-child {
+      display: block;
+    }
+  }
+
+  .footer__privacy {
+    display: none;
+  }
+}
+
+@media (width >= 1024px) {
+  .footer {
+    padding-block: 5rem;
+
+    a {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    > * {
+      gap: 1.5rem 4.375rem;
+    }
+
+    .footer__logo {
+      grid-row: 1;
+    }
+
+    .footer__social-links {
+      margin-block-start: 1.5rem;
+    }
+
+    .footer__nav {
+      grid-column: 1;
+      justify-self: start;
+      gap: 1rem;
+    }
+
+    .footer__contacts {
+      grid-area: 2 / 2;
+      justify-self: end;
+    }
+  }
 }

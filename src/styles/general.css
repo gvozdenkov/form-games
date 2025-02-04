@@ -1,3 +1,35 @@
 section {
   padding-block: var(--section-padding, 3rem);
 }
+
+a[class*='icon'] {
+  --size: 24px;
+
+  display: inline-block;
+  height: var(--size);
+  width: var(--size);
+  color: var(--clr-footer-fg);
+  background-color: var(--clr-footer-fg);
+  mask-position: center;
+  mask-size: cover;
+  mask-repeat: no-repeat;
+
+  transition: var(--transition-sm);
+
+  &:hover,
+  &:focus {
+    background-color: var(--clr-accent);
+  }
+}
+
+a[href*='facebook'] {
+  mask-image: url(../../../public/images/icons/facebook.svg);
+}
+
+a[href*='x.com'] {
+  mask-image: url(../../../public/images/icons/x.svg);
+}
+
+a[href*='linkedin'] {
+  mask-image: url(../../../public/images/icons/linkedin.svg);
+}
