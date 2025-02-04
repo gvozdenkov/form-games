@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+.color-accent {
+  color: var(--clr-accent);
+}
+
 .mb-1 {
   margin-block-end: 4px;
 }

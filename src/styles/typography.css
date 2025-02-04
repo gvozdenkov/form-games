@@ -1,25 +1,79 @@
-.title {
-  font-size: 40px;
+.page-title {
+  font-size: clamp(3.5625rem, 1.6429rem + 9.5982vw, 6.25rem);
   line-height: 0.92;
-  font-weight: 400;
+  letter-spacing: -0.04em;
 }
 
-.paragraph {
-  font-size: 14px;
-  line-height: 1.43;
-  font-weight: 400;
+.heading {
+  font-size: clamp(2.5rem, 0.4464rem + 10.2679vw, 5.375rem);
+  line-height: 0.92;
+  letter-spacing: -0.04em;
 }
 
-@media (width >= 768px) {
-  .title {
-    font-size: 86px;
-    line-height: 0.75;
-    font-weight: 400;
+.page-title,
+.heading {
+  @media (width >= 768px) {
+    letter-spacing: -0.05em;
+    line-height: 0.76;
   }
+}
 
-  .paragraph {
-    font-size: 20px;
+.title {
+  font-size: clamp(1.875rem, 1.25rem + 3.125vw, 2.75rem);
+  line-height: 1.06;
+  letter-spacing: -0.04em;
+
+  @media (width >= 768px) {
+    letter-spacing: -0.05em;
+    line-height: 0.92;
+  }
+}
+
+.subtitle {
+  font-size: clamp(1.5rem, 1.1429rem + 1.7857vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+
+  @media (width >= 768px) {
+    line-height: 1;
+  }
+}
+
+.subtitle-2 {
+  font-size: 1.5rem;
+  line-height: 1.25;
+  letter-spacing: -0.04em;
+}
+
+.body-text {
+  font-size: clamp(1.25rem, 1.5179rem + -1.3393vw, 0.875rem);
+  line-height: 1.43;
+
+  @media (width >= 768px) {
     line-height: 1.4;
-    font-weight: 400;
+  }
+}
+
+.body-text-2 {
+  font-size: 1.25rem;
+  line-height: 1.43;
+}
+
+.button-text {
+  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+  font-weight: var(--fw-500);
+  line-height: 1.43;
+
+  @media (width >= 768px) {
+    line-height: 1.4;
+  }
+}
+
+.tooltip-text {
+  font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
+  line-height: 1.14;
+
+  @media (width >= 768px) {
+    line-height: 1.06;
   }
 }

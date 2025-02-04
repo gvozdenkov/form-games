@@ -15,12 +15,6 @@
   }
 }
 
-.header__title {
-  font-size: 57px;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-}
-
 .header__form {
   display: block;
   gap: 8px;

@@ -1,4 +1,21 @@
 :root {
+  --_clr-black: #000;
+  --_clr-black-50: #373942;
+  --_clr-grey-100: #8a90b3;
+  --_clr-grey-75: #d1d5ed;
+  --_clr-grey-50: #e8eaf6;
+  --_clr-grey-25: #f1f2f8;
+  --_clr-white: #fff;
+  --_clr-violet-i: #6d5dae;
+  --_clr-violet: #8377f1;
+  --_clr-roundtrip: #aaf134;
+  --_clr-retehawk: #ffdd00;
+  --_clr-zenhotels: #f86463;
+  --_clr-red-100: #ff3828;
+  --_clr-red-75: #ff8278;
+  --_clr-red-50: #ffc1bb;
+  --_clr-red-25: #ffe0dd;
+
   --_clr-neutral-900: #000;
   --_clr-neutral-100: #fff;
   --_clr-grey-100: #8a90b3;
@@ -9,15 +26,13 @@
   --_clr-red-100: #ff3828;
   --_clr-green-25: #e1ffdd;
 
-  --_clr-purple-400: #8377f1;
+  --clr-accent: var(--_clr-violet);
 
   --clr-hover: #e8eaf680;
   --clr-bg: var(--_clr-neutral-100);
   --clr-text: var(--_clr-neutral-900);
-  --clr-accent: var(--_clr-purple-400);
-  --clr-footer-bg: var(--_clr-neutral-900);
   --clr-btn-bg: var(--_clr-neutral-900);
-  --clr-btn-bg-accent: var(--_clr-purple-400);
+  --clr-btn-bg-accent: var(--_clr-violet);
   --clr-btn-text: var(--_clr-neutral-100);
   --clr-btn-text-accent: var(--_clr-neutral-100);
   --clr-select-bg: var(--_clr-neutral-100);
@@ -33,6 +48,10 @@
   --clr-input-input-tooltip-bg: var(--_clr-neutral-900);
   --clr-input-input-tooltip-fg: var(--_clr-neutral-100);
 
+  /* footer */
+  --clr-footer-bg: var(--_clr-black);
+  --clr-footer-fg: var(--_clr-white);
+
   --border-radius: 1rem;
   --border-radius-sm: 0.5rem;
   --transition-sm: 100ms ease-out;
@@ -40,19 +59,25 @@
 
   --input-heigth: 2.75rem;
 
-  color: var(--clr-paragraph);
-  background-color: var(--clr-bg);
+  --fw-400: 400;
+  --fw-500: 500;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
+  /* sizing */
+  --step-8: clamp(1rem, 0.2857rem + 3.5714vw, 2rem);
+
+  --ff-primary: system-ui, sans-serif;
 }
 
 body {
-  min-height: 100vh;
-  font-family: system-ui, sans-serif;
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 400;
+  min-height: 100dvh;
+  font-family: var(--ff-primary);
+  font-size: 1.25rem;
+  line-height: 1.4;
+  font-weight: var(--fw-400);
+  color: var(--clr-paragraph);
+  background-color: var(--clr-bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
 }
 
 @media (width > 650px) {
