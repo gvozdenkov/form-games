@@ -1,7 +1,5 @@
 button,
 .button {
-  --fz: 14px;
-  --lh: 1.43;
   --bg: var(--clr-btn-bg);
   --text: var(--clr-btn-text);
 
@@ -16,9 +14,6 @@ button,
   border: 0;
   border-radius: 500px;
 
-  font-size: var(--fz);
-  font-weight: 500;
-  line-height: var(--lh);
   color: var(--text);
   text-decoration: none;
 
@@ -30,11 +25,4 @@ button,
 .button_type_accent {
   --bg: var(--clr-btn-bg-accent);
   --text: var(--clr-btn-text-accent);
-}
-
-@media (width >= 768px) {
-  .button {
-    --fz: 20px;
-    --lh: 1.4;
-  }
 }

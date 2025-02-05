@@ -2,16 +2,16 @@
   display: grid;
   grid-template:
     'img'
-    '.' 20px
+    '.' 1.25rem
     'title'
-    '.' 16px
+    '.' 1rem
     'description'
-    '.' 32px
+    '.' 2rem
     'btn'
     / 1fr;
   justify-items: center;
 
-  padding: 20px 16px 24px;
+  padding: 1.25rem 1rem 1.5rem;
   border-radius: var(--border-radius);
 
   background-color: var(--clr-accent);
@@ -20,6 +20,7 @@
 .card-hiring__title {
   grid-area: title;
   text-align: center;
+  text-wrap: balance;
 }
 
 .card-hiring__description {
@@ -33,20 +34,21 @@
 
 .card-hiring__img {
   grid-area: img;
+  inline-size: 100%;
 }
 
 @media (width >= 768px) {
   .card-hiring {
     grid-template:
       'img'
-      '.' 32px
+      '.' 2rem
       'title'
-      '.' 32px
+      '.' 2rem
       'description'
-      '.' 48px
+      '.' 3rem
       'btn'
       / 1fr;
-    padding: 60px;
+    padding: 3.75rem;
   }
 }
 
@@ -54,11 +56,12 @@
   .card-hiring {
     grid-template:
       'title . img'
-      '. . img' 32px
+      '. . img' 2rem
       'description . img'
       '. . img' auto
+      '. . img' 2rem
       'btn . img'
-      / 1fr auto 1fr;
+      / 1fr 1.25rem 1fr;
   }
 
   .card-hiring__title {
