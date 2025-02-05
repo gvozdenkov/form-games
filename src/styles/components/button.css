@@ -5,20 +5,25 @@ button,
   --bg: var(--clr-btn-bg);
   --text: var(--clr-btn-text);
 
+  cursor: pointer;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
-  text-decoration: none;
+
+  height: var(--input-heigth);
+  padding: 1.125em 2em;
+  border: 0;
+  border-radius: 500px;
+
   font-size: var(--fz);
   font-weight: 500;
   line-height: var(--lh);
-  border: 0;
-  border-radius: 500px;
-  height: var(--input-heigth);
-  background-color: var(--bg);
   color: var(--text);
-  padding: 1.125em 2em;
+  text-decoration: none;
+
+  background-color: var(--bg);
+
   transition: var(--transition-md);
 }
 

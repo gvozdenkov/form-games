@@ -13,8 +13,8 @@
 .page-title,
 .heading {
   @media (width >= 768px) {
-    letter-spacing: -0.05em;
     line-height: 0.76;
+    letter-spacing: -0.05em;
   }
 }
 
@@ -24,8 +24,8 @@
   letter-spacing: -0.04em;
 
   @media (width >= 768px) {
-    letter-spacing: -0.05em;
     line-height: 0.92;
+    letter-spacing: -0.05em;
   }
 }
 

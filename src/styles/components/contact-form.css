@@ -1,0 +1,13 @@
+.contact-form {
+  display: grid;
+  gap: 1rem;
+
+  @media (width > 650px) {
+    grid-template-columns: 1fr 1fr;
+
+    > :nth-child(7),
+    button[type='submit'] {
+      grid-column: 1 / -1;
+    }
+  }
+}

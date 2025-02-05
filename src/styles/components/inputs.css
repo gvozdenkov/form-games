@@ -1,9 +1,9 @@
 .input {
   width: 100%;
   height: var(--input-heigth);
+  padding: 12px 16px;
   border: 0;
   border-radius: var(--border-radius-sm);
-  padding: 12px 16px;
 
   font-size: 14px;
   line-height: 1.43;

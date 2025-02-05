@@ -1,17 +1,25 @@
 .back-button {
   --size: 40px;
 
+  cursor: pointer;
+
+  transform: scale(-1, 1);
+
   display: inline-flex;
   align-items: center;
-  cursor: pointer;
-  text-decoration: none;
+
+  width: var(--size);
+  height: var(--size);
   border: 0;
   border-radius: 500px;
-  height: var(--size);
-  width: var(--size);
-  mask: no-repeat center / contain url(../../../public/images/icons/arrow.svg);
-  mask-size: 35px 13px;
-  transform: scale(-1, 1);
+
+  text-decoration: none;
+
   background-color: var(--clr-fg);
+
+  mask: no-repeat center / contain url("../../../public/images/icons/arrow.svg");
+
   transition: var(--transition-md);
+
+  mask-size: 35px 13px;
 }

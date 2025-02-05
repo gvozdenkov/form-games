@@ -6,15 +6,19 @@ a[class*='icon'] {
   --size: 24px;
 
   display: inline-block;
-  height: var(--size);
+
   width: var(--size);
+  height: var(--size);
+
   color: var(--clr-footer-fg);
+
   background-color: var(--clr-footer-fg);
-  mask-position: center;
-  mask-size: cover;
-  mask-repeat: no-repeat;
 
   transition: var(--transition-sm);
+
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: cover;
 
   &:hover,
   &:focus {
@@ -23,13 +27,13 @@ a[class*='icon'] {
 }
 
 a[href*='facebook'] {
-  mask-image: url(/images/icons/facebook.svg);
+  mask-image: url("/images/icons/facebook.svg");
 }
 
 a[href*='x.com'] {
-  mask-image: url(/images/icons/x.svg);
+  mask-image: url("/images/icons/x.svg");
 }
 
 a[href*='linkedin'] {
-  mask-image: url(/images/icons/linkedin.svg);
+  mask-image: url("/images/icons/linkedin.svg");
 }

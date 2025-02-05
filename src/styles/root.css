@@ -9,15 +9,13 @@
   --_clr-violet-i: #6d5dae;
   --_clr-violet: #8377f1;
   --_clr-roundtrip: #aaf134;
-  --_clr-retehawk: #ffdd00;
+  --_clr-retehawk: #fd0;
   --_clr-zenhotels: #f86463;
   --_clr-red-100: #ff3828;
   --_clr-red-75: #ff8278;
   --_clr-red-50: #ffc1bb;
   --_clr-red-25: #ffe0dd;
-
   --clr-accent: var(--_clr-violet);
-
   --clr-hover: #e8eaf680;
   --clr-bg: var(--_clr-white);
   --clr-fg: var(--_clr-black);
@@ -32,7 +30,6 @@
   --clr-select-bg: var(--_clr-white);
   --clr-select-bg-hover: var(--_clr-grey-75);
   --clr-select-placeholder: var(--_clr-grey-100);
-
   --clr-input-bg: var(--_clr-grey-50);
   --clr-input-bg-error: var(--_clr-red-25);
   --clr-input-bg-valid: var(--_clr-red-25);
@@ -42,7 +39,6 @@
   --clr-input-placeholder-error: var(--_clr-red-75);
   --clr-input-input-tooltip-bg: var(--_clr-black);
   --clr-input-input-tooltip-fg: var(--_clr-white);
-
   --clr-search-input-bg: var(--_clr-white);
   --clr-search-input-fg: var(--_clr-black);
   --clr-search-input-placeholder: var(--_clr-grey-100);
@@ -53,34 +49,33 @@
   /* footer */
   --clr-footer-bg: var(--_clr-black);
   --clr-footer-fg: var(--_clr-white);
-
   --border-radius: 1rem;
   --border-radius-sm: 0.5rem;
   --transition-sm: 100ms ease-out;
   --transition-md: 250ms ease-out;
-
   --input-heigth: 2.75rem;
-
   --fw-400: 400;
   --fw-500: 500;
 
   /* sizing */
   --step-8: clamp(1rem, 0.2857rem + 3.5714vw, 2rem);
-
   --ff-primary: 'Aeroport', sans-serif;
 }
 
 body {
   min-height: 100dvh;
+
   font-family: var(--ff-primary);
   font-size: clamp(1.25rem, 1.5179rem + -1.3393vw, 0.875rem);
   font-weight: var(--fw-400);
   line-height: 1.4;
-  letter-spacing: 0;
   color: var(--clr-paragraph);
+  text-rendering: optimizelegibility;
+  letter-spacing: 0;
+
   background-color: var(--clr-bg);
+
   font-synthesis: none;
-  text-rendering: optimizeLegibility;
 }
 
 @media (width > 650px) {

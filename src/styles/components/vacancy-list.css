@@ -3,21 +3,26 @@
   --tag-dot-size: 2px;
   --hover-inline-padding: 14px;
 
-  border-radius: 16px;
-  padding-inline: var(--hover-inline-padding);
-  width: calc(100% + var(--hover-inline-padding) * 2);
   position: relative;
   left: calc(var(--hover-inline-padding) * -1);
+
+  width: calc(100% + var(--hover-inline-padding) * 2);
+  padding-inline: var(--hover-inline-padding);
+  border-radius: 16px;
 
   transition: var(--transition-md);
 }
 
 .vacancy-list__item::before {
   content: '';
+
   display: block;
-  height: 1px;
+
   width: 100%;
+  height: 1px;
+
   background-color: var(--_clr-grey-75);
+
   transition: var(--transition-md);
 }
 
@@ -41,23 +46,21 @@
   color: var(--clr-accent);
 }
 
-.vacancy-list__item:hover .vacancy-list__arrow {
-  background-color: var(--clr-accent);
-}
-
 .vacancy-list__item > a {
   display: grid;
+
+  /* job title styles */
+  grid-area: title;
   grid-template:
     'title . arrow'
     '. . arrow' 8px
     'tags . arrow'
     / 1fr 20px max-content;
 
-  color: var(--_clr-neutral-900);
   padding-block: 32px;
 
-  /* job title styles */
-  grid-area: title;
+  color: var(--_clr-neutral-900);
+
   transition: var(--transition-md);
 }
 
@@ -65,8 +68,8 @@
 .vacancy-list__item ul {
   --gap: 20px;
 
-  grid-area: tags;
   display: flex;
+  grid-area: tags;
   flex-wrap: wrap;
   gap: calc(var(--gap) / 2);
   row-gap: 4px;
@@ -77,28 +80,36 @@
   > li {
     display: grid;
     grid-auto-flow: column;
-    align-items: center;
     gap: calc(var(--gap) / 2);
+    align-items: center;
   }
 
   > li:not(:last-of-type)::after {
     content: '';
     width: var(--tag-dot-size);
     height: var(--tag-dot-size);
-    background-color: currentColor;
+    background-color: currentcolor;
   }
 }
 
 .vacancy-list__arrow {
   display: none;
-  width: 42px;
-  height: 16px;
   grid-area: arrow;
   place-self: stretch;
   place-self: center;
-  mask: no-repeat center / contain url('/images/icons/arrow.svg');
+
+  width: 42px;
+  height: 16px;
+
   background-color: var(--clr-fg);
+
+  mask: no-repeat center / contain url('/images/icons/arrow.svg');
+
   transition: var(--transition-md);
+}
+
+.vacancy-list__item:hover .vacancy-list__arrow {
+  background-color: var(--clr-accent);
 }
 
 @media (width >= 768px) {
@@ -118,7 +129,6 @@
     grid-template:
       'title . tags . arrow'
       / 630fr 20px 562fr 20px max-content;
-
     padding-block: 40px;
   }
 }

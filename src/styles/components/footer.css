@@ -1,18 +1,21 @@
 .footer {
   --flow-spacer: 0.75rem;
 
-  color: var(--clr-footer-fg);
-  background-color: var(--clr-footer-bg);
   padding-block: 2rem;
 
   font-size: 1rem;
   line-height: 1.375;
+  color: var(--clr-footer-fg);
+
+  background-color: var(--clr-footer-bg);
 
   a {
     display: block;
+
     font-size: 0.875rem;
     line-height: 1.2;
     color: var(--clr-footer-fg);
+
     transition: var(--transition-sm);
 
     &:hover {
@@ -122,8 +125,8 @@
 
     .footer__nav {
       grid-column: 1;
-      justify-self: start;
       gap: 1rem;
+      justify-self: start;
     }
 
     .footer__contacts {
