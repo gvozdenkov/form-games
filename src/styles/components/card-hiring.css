@@ -37,6 +37,45 @@
   inline-size: 100%;
 }
 
+.card-hiring__form-popover {
+  inline-size: 100vw;
+  block-size: 100dvh;
+  margin: unset;
+  padding: 1.5rem;
+  border: none;
+
+  > hgroup {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1.25rem;
+    align-items: center;
+
+    margin-block-end: 2rem;
+
+    > button {
+      justify-self: end;
+    }
+  }
+
+  @media (width >=768px) {
+    padding: 2.5rem;
+
+    > hgroup {
+      margin-block-end: 2.5rem;
+    }
+  }
+
+  @media (width >= 1280px) {
+    right: 0;
+    left: unset;
+    inline-size: 50%;
+
+    &::backdrop {
+      background-color: color-mix(in srgb, var(--clr-accent) 70%, transparent);
+    }
+  }
+}
+
 @media (width >= 768px) {
   .card-hiring {
     grid-template:

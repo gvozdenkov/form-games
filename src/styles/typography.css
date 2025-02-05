@@ -61,17 +61,6 @@
   letter-spacing: 0;
 }
 
-.button-text {
-  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
-  font-weight: var(--fw-500);
-  line-height: 1.43;
-  letter-spacing: 0;
-
-  @media (width >= 768px) {
-    line-height: 1.4;
-  }
-}
-
 .tooltip-text {
   font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
   line-height: 1.14;

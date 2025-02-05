@@ -22,9 +22,14 @@
 
   /* buttons */
   --clr-btn-bg: var(--_clr-black);
+  --clr-btn-fg: var(--_clr-white);
+  --clr-btn-fg-hover: var(--_clr-violet);
   --clr-btn-bg-accent: var(--_clr-violet);
-  --clr-btn-text: var(--_clr-white);
-  --clr-btn-text-accent: var(--_clr-white);
+  --clr-btn-fg-accent: var(--_clr-white);
+  --clr-btn-fg-accent-hover: var(--_clr-black);
+  --clr-btn-bg-ghost: var(--_clr-grey-50);
+  --clr-btn-fg-ghost: var(--_clr-black);
+  --clr-btn-fg-ghost-hover: var(--_clr-violet);
 
   /* form */
   --clr-select-bg: var(--_clr-white);
@@ -32,10 +37,12 @@
   --clr-select-placeholder: var(--_clr-grey-100);
   --clr-input-bg: var(--_clr-grey-50);
   --clr-input-bg-error: var(--_clr-red-25);
+  --clr-input-bg-error-hover: var(--_clr-red-50);
   --clr-input-bg-valid: var(--_clr-red-25);
   --clr-input-fg-error: var(--_clr-red-100);
   --clr-input-bg-hover: var(--_clr-grey-75);
   --clr-input-placeholder: var(--_clr-grey-100);
+  --clr-input-placeholder-hover: var(--_clr-grey-100);
   --clr-input-placeholder-error: var(--_clr-red-75);
   --clr-input-input-tooltip-bg: var(--_clr-black);
   --clr-input-input-tooltip-fg: var(--_clr-white);
@@ -53,7 +60,7 @@
   --border-radius-sm: 0.5rem;
   --transition-sm: 100ms ease-out;
   --transition-md: 250ms ease-out;
-  --input-heigth: 2.75rem;
+  --input-heigth: 2.625rem;
   --fw-400: 400;
   --fw-500: 500;
 
@@ -78,7 +85,7 @@ body {
   font-synthesis: none;
 }
 
-@media (width > 650px) {
+@media (width >= 768px) {
   :root {
     --input-heigth: 3.75rem;
   }

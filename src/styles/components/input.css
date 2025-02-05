@@ -1,0 +1,78 @@
+.input-group {
+  position: relative;
+
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+
+  height: var(--input-heigth);
+  padding: 0 1rem;
+  border-radius: var(--border-radius-sm);
+
+  background-color: var(--clr-input-bg);
+
+  &:focus-within,
+  &:has(input:hover) {
+    background-color: var(--clr-input-bg-hover);
+    transition: var(--transition-sm);
+  }
+
+  &:has(input:user-invalid) {
+    background-color: var(--clr-input-bg-error);
+
+    .input-group__input {
+      color: var(--clr-input-fg-error);
+
+      &::placeholder {
+        color: var(--clr-input-placeholder-error);
+      }
+    }
+
+    .input-group__error-btn {
+      display: block;
+    }
+
+    &:focus-within,
+    &:has(input:hover) {
+      background-color: var(--clr-input-bg-error-hover);
+      transition: var(--transition-sm);
+    }
+  }
+
+  @media (width >= 768px) {
+    border-radius: var(--border-radius);
+  }
+}
+
+.input-group__input {
+  width: 100%;
+  border: none;
+  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+  background-color: transparent;
+
+  &::placeholder {
+    color: var(--clr-input-placeholder);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.input-group__error-btn {
+  cursor: pointer;
+  display: none;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+
+    background: no-repeat center / contain url('/images/icons/error.svg');
+  }
+}

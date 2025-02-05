@@ -2,11 +2,10 @@
   display: grid;
   gap: 1rem;
 
-  @media (width > 650px) {
+  @media (width >= 768px) {
     grid-template-columns: 1fr 1fr;
 
-    > :nth-child(7),
-    button[type='submit'] {
+    > :nth-child(n + 4):nth-last-child(-n + 4) {
       grid-column: 1 / -1;
     }
   }

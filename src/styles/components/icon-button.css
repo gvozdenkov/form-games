@@ -1,0 +1,53 @@
+.button-icon {
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: var(--input-heigth);
+  block-size: var(--input-heigth);
+  padding: 0;
+  border: none;
+  border-radius: 100vw;
+
+  background-color: var(--clr-btn-bg);
+
+  &::before {
+    content: '';
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    background-color: var(--clr-btn-fg);
+  }
+
+  &:hover {
+    &::before {
+      background-color: var(--clr-btn-fg-hover);
+    }
+  }
+}
+
+.button-icon_type_ghost {
+  background-color: var(--clr-btn-bg-ghost);
+
+  &::before {
+    background-color: var(--clr-btn-fg-ghost);
+  }
+
+  &:hover {
+    &::before {
+      background-color: var(--clr-btn-fg-ghost-hover);
+    }
+  }
+}
+
+/* icon variants */
+
+.button-icon_close::before {
+  mask: no-repeat center / contain url('/images/icons/close-s.svg');
+  transition: var(--transition-sm);
+
+  @media (width >= 768px) {
+    mask-image: url('/images/icons/close-l.svg');
+  }
+}

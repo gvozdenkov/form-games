@@ -147,11 +147,147 @@
           <p class="body-text card-hiring__description">
             Because we have a lot of opportunities waiting for you to take advantage of them
           </p>
-          <button class="button card-hiring__btn button-text">Tell about yourself</button>
+          <button popovertarget="vacancy-main-contact-form" class="button card-hiring__btn">
+            Tell about yourself
+          </button>
+
+          <div popover id="vacancy-main-contact-form" class="card-hiring__form-popover">
+            <hgroup>
+              <h2 class="title">Free application form</h2>
+              <button
+                popovertarget="vacancy-main-contact-form"
+                popovertargetaction="hide"
+                type="button"
+                class="button-icon button-icon_type_ghost button-icon_close"
+                aria-label="Close menu"></button>
+            </hgroup>
+            <form class="contact-form" novalidate onsubmit="event.preventDefault()">
+              <!-- Name -->
+              <div class="input-group">
+                <input
+                  type="text"
+                  aria-label="First name"
+                  placeholder="First name"
+                  id="first-name"
+                  class="input-group__input"
+                  pattern=".{2,}"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="first-name-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="first-name-error-hint">You didn't enter a first name</p>
+              </div>
+
+              <!-- Last Name -->
+              <div class="input-group">
+                <input
+                  type="text"
+                  aria-label="Last name"
+                  placeholder="Last name"
+                  id="last-name"
+                  class="input-group__input"
+                  pattern=".{2,}"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="last-name-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="last-name-error-hint">You didn't enter a last name</p>
+              </div>
+
+              <!-- Email -->
+              <div class="input-group">
+                <input
+                  type="email"
+                  aria-label="Email"
+                  placeholder="Email"
+                  id="email"
+                  class="input-group__input"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="email-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="email-error-hint">You didn't enter a email name</p>
+              </div>
+
+              <!-- Phone -->
+              <div class="input-group">
+                <input
+                  type="tel"
+                  aria-label="Phone"
+                  placeholder="Phone"
+                  id="phone"
+                  class="input-group__input"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="phone-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="phone-error-hint">You didn't enter a phone name</p>
+              </div>
+
+              <!-- Location -->
+              <div class="input-group">
+                <input
+                  aria-label="Location"
+                  type="text"
+                  placeholder="Location"
+                  id="location"
+                  class="input-group__input"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="location-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="location-error-hint">You didn't enter a location name</p>
+              </div>
+
+              <!-- Link -->
+              <div class="input-group">
+                <input
+                  aria-label="Linkedin link"
+                  type="url"
+                  placeholder="Link linkedin"
+                  id="link-linkedin"
+                  class="input-group__input"
+                  required />
+                <button
+                  aria-label="Show error tooltip"
+                  popovertarget="link-error-hint"
+                  class="input-group__error-btn"
+                  type="button"></button>
+                <p popover id="link-error-hint">You didn't enter a Linkedin</p>
+              </div>
+
+              <!-- About -->
+              <div class="input-group">
+                <input
+                  aria-label="How did you learn about this job"
+                  type="text"
+                  placeholder="How did you learn about this job"
+                  id="message"
+                  class="input-group__input"
+                  autocomplete="false" />
+              </div>
+
+              <div class="input-group"><p>upload zone</p></div>
+              <div class="input-group"><p>checkbox</p></div>
+              <button class="button button_type_accent" type="submit">Send</button>
+            </form>
+          </div>
+
           <img src="/images/hiring-card-img.svg" alt="" class="card-hiring__img" aria-hidden="" />
         </article>
       </aside>
     </main>
+
     <footer class="footer">
       <div class="content-width">
         <div class="footer__contacts">

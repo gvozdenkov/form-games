@@ -1,7 +1,6 @@
-button,
 .button {
   --bg: var(--clr-btn-bg);
-  --text: var(--clr-btn-text);
+  --text: var(--clr-btn-fg);
 
   cursor: pointer;
 
@@ -10,19 +9,31 @@ button,
   justify-content: center;
 
   height: var(--input-heigth);
-  padding: 1.125em 2em;
+  padding: 0 2em;
   border: 0;
-  border-radius: 500px;
+  border-radius: 100vw;
 
+  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+  font-weight: var(--fw-500);
+  line-height: 1.43;
   color: var(--text);
   text-decoration: none;
+  letter-spacing: 0;
 
   background-color: var(--bg);
 
   transition: var(--transition-md);
+
+  &:hover {
+    color: var(--clr-btn-fg-hover);
+  }
+
+  @media (width >= 768px) {
+    line-height: 1.4;
+  }
 }
 
 .button_type_accent {
   --bg: var(--clr-btn-bg-accent);
-  --text: var(--clr-btn-text-accent);
+  --text: var(--clr-btn-fg-accent);
 }
