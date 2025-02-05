@@ -1,4 +1,4 @@
-section {
+.section {
   padding-block: var(--section-padding, 3rem);
 }
 
@@ -23,13 +23,13 @@ a[class*='icon'] {
 }
 
 a[href*='facebook'] {
-  mask-image: url(../../../public/images/icons/facebook.svg);
+  mask-image: url(/images/icons/facebook.svg);
 }
 
 a[href*='x.com'] {
-  mask-image: url(../../../public/images/icons/x.svg);
+  mask-image: url(/images/icons/x.svg);
 }
 
 a[href*='linkedin'] {
-  mask-image: url(../../../public/images/icons/linkedin.svg);
+  mask-image: url(/images/icons/linkedin.svg);
 }

@@ -1,7 +1,3 @@
-.vacancy-list {
-  margin-block: 80px;
-}
-
 .vacancy-list__item {
   --transition-md: 250ms ease-out;
   --tag-dot-size: 2px;
@@ -105,18 +101,14 @@
   transition: var(--transition-md);
 }
 
-@media (width >= 600px) {
-  .vacancy-list__item {
-    --tag-dot-size: 3px;
-  }
-  .vacancy-list__arrow {
-    display: block;
-  }
-}
-
 @media (width >= 768px) {
   .vacancy-list__item {
+    --tag-dot-size: 3px;
     --hover-inline-padding: 28px;
+  }
+
+  .vacancy-list__arrow {
+    display: block;
   }
 }
 

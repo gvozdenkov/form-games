@@ -1,0 +1,14 @@
+.vacancy-main {
+  display: grid;
+  row-gap: 3rem;
+  padding-block: 3rem;
+
+  @media (width >=768px) {
+    row-gap: 7.5rem;
+    padding-block: 3.75rem 7.5rem;
+  }
+
+  @media (width >=1280px) {
+    padding-block: 5rem 7.5rem;
+  }
+}

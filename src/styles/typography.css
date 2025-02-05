@@ -46,12 +46,12 @@
 }
 
 .body-text {
-  font-size: clamp(1.25rem, 1.5179rem + -1.3393vw, 0.875rem);
-  line-height: 1.43;
+  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
+  line-height: 1.4;
   letter-spacing: 0;
 
   @media (width >= 768px) {
-    line-height: 1.4;
+    line-height: 1.43;
   }
 }
 

@@ -1,8 +1,11 @@
 @import url(./header.css);
+@import url(./vacancy-main.css);
 @import url(./vacancy-list.css);
 @import url(./card-hiring.css);
 @import url(./button.css);
 @import url(./back-button.css);
 @import url(./inputs.css);
+@import url(./search-input.css);
 @import url(./custom-select.css);
 @import url(./footer.css);
+@import url(./doodles.css);

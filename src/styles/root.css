@@ -23,7 +23,7 @@
   --clr-fg: var(--_clr-black);
 
   /* buttons */
-  --clr-btn-bg: var(---_clr-black);
+  --clr-btn-bg: var(--_clr-black);
   --clr-btn-bg-accent: var(--_clr-violet);
   --clr-btn-text: var(--_clr-white);
   --clr-btn-text-accent: var(--_clr-white);
@@ -40,8 +40,15 @@
   --clr-input-bg-hover: var(--_clr-grey-75);
   --clr-input-placeholder: var(--_clr-grey-100);
   --clr-input-placeholder-error: var(--_clr-red-75);
-  --clr-input-input-tooltip-bg: var(---_clr-black);
+  --clr-input-input-tooltip-bg: var(--_clr-black);
   --clr-input-input-tooltip-fg: var(--_clr-white);
+
+  --clr-search-input-bg: var(--_clr-white);
+  --clr-search-input-fg: var(--_clr-black);
+  --clr-search-input-placeholder: var(--_clr-grey-100);
+  --clr-search-input-bg-hover: var(--_clr-grey-25);
+  --clr-search-input-fg-hover: var(--clr-accent);
+  --clr-search-input-placeholder-hover: var(--clr-accent);
 
   /* footer */
   --clr-footer-bg: var(--_clr-black);

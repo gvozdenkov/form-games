@@ -1,25 +1,31 @@
 .layout {
-  --column-count: 12;
+  --column-count: 4;
+  --column-gap: 1rem;
   --gutter: 1.5rem;
   --content-max-width: 1290px;
-  --grid-col-max-width: calc(var(--content-max-width) / var(--column-count));
+  --calc-content-max-width: calc(
+    var(--content-max-width) - var(--column-gap) * (var(--column-count) - 1)
+  );
+  --calc-gutter: calc(var(--gutter) - var(--column-gap));
+  --grid-col-max-width: calc(var(--calc-content-max-width) / var(--column-count));
 
   display: grid;
   grid-template-columns:
     [fullbleed-start]
-    minmax(var(--gutter), 1fr)
+    minmax(var(--calc-gutter), 1fr)
     [content-start]
     repeat(var(--column-count), minmax(0, var(--grid-col-max-width)))
     [content-end]
-    minmax(var(--gutter), 1fr)
+    minmax(var(--calc-gutter), 1fr)
     [fullbleed-end];
   grid-template-rows: min-content 1fr min-content;
+  column-gap: var(--column-gap);
 }
 
 .layout > * {
   display: grid;
-  grid-template-columns: subgrid;
   grid-column: fullbleed;
+  grid-template-columns: subgrid;
 }
 
 .full-width {
@@ -33,5 +39,11 @@
 @media (width >= 768px) {
   .layout {
     --gutter: 2.5rem;
+  }
+}
+
+@media (width >= 1024px) {
+  .layout {
+    --column-count: 12;
   }
 }

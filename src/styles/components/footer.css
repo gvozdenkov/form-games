@@ -67,7 +67,7 @@
   gap: 1rem;
 }
 
-@media (width >= 768px) {
+@media (width >= 568px) {
   .footer {
     --flow-spacer: 0.5rem;
 
