@@ -27,13 +27,13 @@ a[class*='icon'] {
 }
 
 a[href*='facebook'] {
-  mask-image: url("/images/icons/facebook.svg");
+  mask-image: url('/images/icons/facebook.svg');
 }
 
 a[href*='x.com'] {
-  mask-image: url("/images/icons/x.svg");
+  mask-image: url('/images/icons/x.svg');
 }
 
 a[href*='linkedin'] {
-  mask-image: url("/images/icons/linkedin.svg");
+  mask-image: url('/images/icons/linkedin.svg');
 }

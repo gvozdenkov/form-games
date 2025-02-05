@@ -3,7 +3,9 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: local('Aeroport'), url('./Aeroport-Bold.woff2') format('woff2');
+  src:
+    local('Aeroport'),
+    url('./Aeroport-Bold.woff2') format('woff2');
 }
 
 @font-face {
@@ -11,7 +13,9 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: local('Aeroport'), url('./Aeroport.woff2') format('woff2');
+  src:
+    local('Aeroport'),
+    url('./Aeroport.woff2') format('woff2');
 }
 
 @font-face {
@@ -19,5 +23,7 @@
   font-weight: 500;
   font-style: normal;
   font-display: swap;
-  src: local('Aeroport'), url('./Aeroport-Medium.woff2') format('woff2');
+  src:
+    local('Aeroport'),
+    url('./Aeroport-Medium.woff2') format('woff2');
 }

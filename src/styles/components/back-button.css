@@ -17,7 +17,7 @@
 
   background-color: var(--clr-fg);
 
-  mask: no-repeat center / contain url("../../../public/images/icons/arrow.svg");
+  mask: no-repeat center / contain url('../../../public/images/icons/arrow.svg');
 
   transition: var(--transition-md);
 
