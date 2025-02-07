@@ -1,5 +1,4 @@
 .vacancy-list__item {
-  --transition-md: 250ms ease-out;
   --tag-dot-size: 2px;
   --hover-inline-padding: 14px;
 
@@ -10,7 +9,7 @@
   padding-inline: var(--hover-inline-padding);
   border-radius: 16px;
 
-  transition: var(--transition-md);
+  transition: var(--transition-sm);
 }
 
 .vacancy-list__item::before {
@@ -23,27 +22,31 @@
 
   background-color: var(--_clr-grey-75);
 
-  transition: var(--transition-md);
+  transition: var(--transition-sm);
 }
 
 /* disable dividers on hover */
 
 .vacancy-list__item:hover {
-  background-color: var(--clr-hover);
-}
-
-.vacancy-list__item:hover::before {
-  opacity: 0;
-}
-
-.vacancy-list__item:hover + .vacancy-list__item::before {
-  opacity: 0;
-}
-
-/* ^^^^ disable dividers on hover */
-
-.vacancy-list__item:hover .vacancy-list__title {
   color: var(--clr-accent);
+  background-color: var(--clr-hover);
+
+  &::before {
+    opacity: 0;
+  }
+
+  ul {
+    color: var(--clr-accent);
+  }
+
+  .vacancy-list__arrow {
+    background-color: var(--clr-accent);
+  }
+
+  /* disable dividers on hover */
+  & + .vacancy-list__item::before {
+    opacity: 0;
+  }
 }
 
 .vacancy-list__item > a {
@@ -61,7 +64,7 @@
 
   color: var(--_clr-neutral-900);
 
-  transition: var(--transition-md);
+  transition: var(--transition-sm);
 }
 
 /* job tags styles */
@@ -105,11 +108,7 @@
 
   mask: no-repeat center / contain url('/images/icons/arrow.svg');
 
-  transition: var(--transition-md);
-}
-
-.vacancy-list__item:hover .vacancy-list__arrow {
-  background-color: var(--clr-accent);
+  transition: var(--transition-sm);
 }
 
 @media (width >= 768px) {
