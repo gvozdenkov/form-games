@@ -1,5 +1,5 @@
 .back-button {
-  --size: 40px;
+  --_size: 2.5rem;
 
   cursor: pointer;
 
@@ -8,8 +8,8 @@
   display: inline-flex;
   align-items: center;
 
-  width: var(--size);
-  height: var(--size);
+  width: var(--_size);
+  height: var(--_size);
   border: 0;
   border-radius: 500px;
 
@@ -17,9 +17,21 @@
 
   background-color: var(--clr-fg);
 
-  mask: no-repeat center / contain url('../../../public/images/icons/arrow.svg');
+  mask: no-repeat center / contain url('/images/icons/arrow.svg');
 
-  transition: var(--transition-md);
+  mask-size: 42px 16px;
 
-  mask-size: 35px 13px;
+  &:hover,
+  &:focus {
+    transform: scale(1, 1);
+
+    mask-image: url('/images/icons/arrow-bold.svg');
+    mask-size: 45px 19px;
+  }
+
+  @media (width >= 768px) {
+    --_size: 3rem;
+
+    mask-size: 2.625rem 1rem;
+  }
 }
