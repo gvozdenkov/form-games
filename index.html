@@ -161,11 +161,12 @@
                 class="button-icon button-icon_type_ghost button-icon_close"
                 aria-label="Close menu"></button>
             </hgroup>
-            <form class="contact-form" novalidate onsubmit="event.preventDefault()">
+            <form class="contact-form" id="main-contact-form" novalidate>
               <!-- Name -->
               <div class="input-group">
                 <input
                   type="text"
+                  name="name"
                   aria-label="First name"
                   placeholder="First name"
                   id="first-name"
@@ -184,6 +185,7 @@
               <div class="input-group">
                 <input
                   type="text"
+                  name="last"
                   aria-label="Last name"
                   placeholder="Last name"
                   id="last-name"
@@ -202,6 +204,7 @@
               <div class="input-group">
                 <input
                   type="email"
+                  name="email"
                   aria-label="Email"
                   placeholder="Email"
                   id="email"
@@ -219,6 +222,7 @@
               <div class="input-group">
                 <input
                   type="tel"
+                  name="tel"
                   aria-label="Phone"
                   placeholder="Phone"
                   id="phone"
@@ -235,8 +239,9 @@
               <!-- Location -->
               <div class="input-group">
                 <input
-                  aria-label="Location"
                   type="text"
+                  name="location"
+                  aria-label="Location"
                   placeholder="Location"
                   id="location"
                   class="input-group__input"
@@ -252,10 +257,11 @@
               <!-- Link -->
               <div class="input-group">
                 <input
-                  aria-label="Linkedin link"
                   type="url"
+                  name="linkedin"
+                  aria-label="Link linkedin"
                   placeholder="Link linkedin"
-                  id="link-linkedin"
+                  id="linkedin"
                   class="input-group__input"
                   required />
                 <button
@@ -269,16 +275,45 @@
               <!-- About -->
               <div class="input-group">
                 <input
-                  aria-label="How did you learn about this job"
                   type="text"
+                  name="message"
+                  aria-label="How did you learn about this job"
                   placeholder="How did you learn about this job"
                   id="message"
                   class="input-group__input"
                   autocomplete="false" />
               </div>
 
-              <div class="input-group"><p>upload zone</p></div>
-              <div class="input-group"><p>checkbox</p></div>
+              <div class="upload-zone">
+                <div class="input-group input-group_upload">
+                  <label for="file"
+                    >Upload a&nbsp;resume file and cover letter PDF, DOC, DOCX, TXT
+                    up&nbsp;to&nbsp;20&nbsp;MB</label
+                  >
+                  <input
+                    class="sr-only"
+                    type="file"
+                    name="files"
+                    id="file"
+                    accept=".pdf,.doc,.docx,.txt"
+                    multiple />
+                </div>
+
+                <div class="upload-zone__file" hidden>
+                  <p></p>
+                  <button type="button" aria-label="Remove file"></button>
+                </div>
+                <div class="upload-zone__file" hidden>
+                  <p></p>
+                  <button type="button" aria-label="Remove file"></button>
+                </div>
+              </div>
+
+              <label class="custom-checkbox">
+                <input type="checkbox" name="agree" id="agree" />
+                By&nbsp;submitting my&nbsp;application&nbsp;I agree that my&nbsp;data is&nbsp;being
+                stored and processed
+              </label>
               <button class="button button_type_accent" type="submit">Send</button>
             </form>
           </div>
@@ -342,5 +377,6 @@
       </div>
     </footer>
     <script src="custom-select.js" type="module"></script>
+    <script src="contact-form.js" type="module"></script>
   </body>
 </html>

@@ -1,7 +1,4 @@
 .button {
-  --bg: var(--clr-btn-bg);
-  --text: var(--clr-btn-fg);
-
   cursor: pointer;
 
   display: inline-flex;
@@ -16,11 +13,11 @@
   font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
   font-weight: var(--fw-500);
   line-height: 1.43;
-  color: var(--text);
+  color: var(--fg, var(--clr-btn-fg));
   text-decoration: none;
   letter-spacing: 0;
 
-  background-color: var(--bg);
+  background-color: var(--bg, var(--clr-btn-bg));
 
   transition: var(--transition-md);
 
@@ -35,5 +32,9 @@
 
 .button_type_accent {
   --bg: var(--clr-btn-bg-accent);
-  --text: var(--clr-btn-fg-accent);
+  --fg: var(--clr-btn-fg-accent);
+
+  &:hover {
+    color: var(--clr-btn-fg-accent-hover);
+  }
 }

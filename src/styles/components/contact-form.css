@@ -5,8 +5,9 @@
   @media (width >= 768px) {
     grid-template-columns: 1fr 1fr;
 
-    > :nth-child(n + 4):nth-last-child(-n + 4) {
+    > :nth-child(n + 5):nth-last-child(-n + 5) {
       grid-column: 1 / -1;
     }
   }
 }
+

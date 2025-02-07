@@ -1,0 +1,47 @@
+.upload-zone {
+  display: grid;
+  gap: 1rem;
+}
+
+.upload-zone__file {
+  display: flex;
+  gap: 0.5rem;
+
+  height: var(--input-heigth);
+  padding: 1rem;
+  border-radius: var(--input-border-radius);
+
+  background-color: var(--clr-input-bg);
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+
+    background: no-repeat center / contain url('/images/icons/doc.svg');
+  }
+
+  > button {
+    cursor: pointer;
+
+    inline-size: 1.5rem;
+    block-size: 1.5rem;
+    margin-inline-start: auto;
+    border: none;
+
+    background-color: currentcolor;
+
+    mask: no-repeat center / contain url('/images/icons/trash.svg');
+
+    &:hover {
+      background-color: var(--clr-accent);
+    }
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}

@@ -52,6 +52,7 @@
   --clr-search-input-bg-hover: var(--_clr-grey-25);
   --clr-search-input-fg-hover: var(--clr-accent);
   --clr-search-input-placeholder-hover: var(--clr-accent);
+  --input-border-radius: var(--border-radius-sm);
 
   /* footer */
   --clr-footer-bg: var(--_clr-black);
@@ -88,6 +89,7 @@ body {
 @media (width >= 768px) {
   :root {
     --input-heigth: 3.75rem;
+    --input-border-radius: var(--border-radius);
   }
 
   body {
