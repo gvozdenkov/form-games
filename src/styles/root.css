@@ -40,6 +40,7 @@
   --clr-select-bg: var(--_clr-white);
   --clr-select-bg-hover: var(--_clr-grey-75);
   --clr-select-placeholder: var(--_clr-grey-100);
+  --clr-select-shadow: var(--_clr-grey-100);
   --clr-input-bg: var(--_clr-grey-50);
   --clr-input-bg-error: var(--_clr-red-25);
   --clr-input-bg-error-hover: var(--_clr-red-50);

@@ -51,7 +51,7 @@
 
   background-color: var(--clr-fg);
 
-  mask: no-repeat center / contain url('../../../public/images/icons/caret.svg');
+  mask: no-repeat center / contain url('/images/icons/caret.svg');
 
   transition: var(--transition-md);
 }
@@ -124,10 +124,13 @@
   transition: var(--transition-md);
 }
 
-/* @media (width >= 768px) {
+@media (width >= 768px) {
   .custom-select__dropdown {
     position: absolute;
-    left: 0;
+    z-index: 10;
     top: calc(100% + 8px);
+    left: 0;
+
+    box-shadow: 0 8px 32px 0 color-mix(in srgb, var(--clr-select-shadow) 70%, transparent);
   }
-} */
+}
