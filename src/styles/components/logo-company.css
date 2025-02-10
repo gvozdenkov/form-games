@@ -1,0 +1,64 @@
+.logo-company {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  inline-size: fit-content;
+  block-size: 2rem;
+  padding-inline: 0.75rem;
+  border-radius: 100vw;
+
+  background-color: var(--bg, red);
+
+  &::after {
+    content: '';
+
+    inline-size: var(--logo-width, 5.875rem);
+    block-size: var(--logo-height, 1.5625rem);
+
+    background-color: var(--fg, yellow);
+
+    mask: no-repeat center / contain;
+
+    mask-image: var(--mask, url('/images/icons/ratehawk.svg'));
+  }
+
+  @media (width >= 768px) {
+    block-size: 2.5rem;
+    padding-inline: 1rem;
+  }
+}
+
+.logo-company_ratehawk {
+  --bg: var(--clr-retehawk);
+  --fg: var(--clr-fg);
+  --mask: url('/images/icons/ratehawk.svg');
+  --logo-width: 5.875rem;
+  --logo-height: 1.5625rem;
+}
+
+.logo-company_roundtrip {
+  --bg: var(--clr-roundtrip);
+  --fg: var(--clr-fg);
+  --mask: url('/images/icons/roundtrip.svg');
+  --logo-width: 5.875rem;
+  --logo-height: 1.5625rem;
+
+  @media (width >= 768px) {
+    --logo-width: 6.375rem;
+    --logo-height: 1rem;
+  }
+}
+
+.logo-company_zenhotels {
+  --bg: var(--clr-zenhotels);
+  --fg: var(--clr-bg);
+  --mask: url('/images/icons/zenhotels.svg');
+  --logo-width: 5.875rem;
+  --logo-height: 1.5625rem;
+
+  @media (width >= 768px) {
+    --logo-width: 6.375rem;
+    --logo-height: 1rem;
+  }
+}

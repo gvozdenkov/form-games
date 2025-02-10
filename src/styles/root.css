@@ -8,9 +8,6 @@
   --_clr-white: #fff;
   --_clr-violet-i: #6d5dae;
   --_clr-violet: #8377f1;
-  --_clr-roundtrip: #aaf134;
-  --_clr-retehawk: #fd0;
-  --_clr-zenhotels: #f86463;
   --_clr-red-100: #ff3828;
   --_clr-red-75: #ff8278;
   --_clr-red-50: #ffc1bb;
@@ -19,6 +16,11 @@
   --clr-hover: #e8eaf680;
   --clr-bg: var(--_clr-white);
   --clr-fg: var(--_clr-black);
+
+  /* brands */
+  --clr-roundtrip: #aaf134;
+  --clr-retehawk: #fd0;
+  --clr-zenhotels: #f86463;
 
   /* text */
   --text-highlight: var(--_clr-violet-i);
