@@ -7,7 +7,11 @@
     grid-column: content;
   }
 
-  .page-title {
+  > :last-child {
+    padding-block: 2rem 3rem;
+  }
+
+  h1 {
     margin-block-end: 2rem;
   }
 }

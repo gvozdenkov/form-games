@@ -1,0 +1,42 @@
+.vd-content {
+  grid-column: content;
+  gap: 3.75rem;
+  align-content: start;
+  padding-block: 3rem;
+
+  .title {
+    margin-block-end: 1.25rem;
+  }
+
+  section header {
+    display: grid;
+    grid-auto-flow: column;
+
+    .title {
+      margin: 0;
+    }
+  }
+
+  ul:not(:last-child) {
+    margin-block-end: 3rem;
+  }
+
+  h3,
+  p:not(:last-child) {
+    margin-block-end: 1.25rem;
+  }
+
+  @media (width >=768px) {
+    gap: 5rem;
+
+    .title {
+      margin-block-end: 2rem;
+    }
+  }
+
+  @media (width >=1440px) {
+    grid-column: right-content;
+    gap: 6rem;
+    padding-block-start: calc(var(--header-block-size) + 1.25rem);
+  }
+}

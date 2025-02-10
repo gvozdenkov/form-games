@@ -1,5 +1,4 @@
 .vacancy-list__item {
-  --tag-dot-size: 2px;
   --hover-inline-padding: 14px;
 
   position: relative;
@@ -68,7 +67,7 @@
 }
 
 /* job tags styles */
-.vacancy-list__item ul {
+.vacancy-tag-list {
   --gap: 20px;
 
   display: flex;
@@ -89,9 +88,13 @@
 
   > li:not(:last-of-type)::after {
     content: '';
-    width: var(--tag-dot-size);
-    height: var(--tag-dot-size);
+    aspect-ratio: 1;
+    inline-size: var(--tag-dot-size, 2px);
     background-color: currentcolor;
+  }
+
+  @media (width >= 768px) {
+    --tag-dot-size: 3px;
   }
 }
 
@@ -113,7 +116,6 @@
 
 @media (width >= 768px) {
   .vacancy-list__item {
-    --tag-dot-size: 3px;
     --hover-inline-padding: 28px;
   }
 

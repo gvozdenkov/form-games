@@ -20,6 +20,9 @@
   --clr-bg: var(--_clr-white);
   --clr-fg: var(--_clr-black);
 
+  /* text */
+  --text-highlight: var(--_clr-violet-i);
+
   /* buttons */
   --clr-btn-bg: var(--_clr-black);
   --clr-btn-fg: var(--_clr-white);
@@ -68,13 +71,24 @@
   /* sizing */
   --step-8: clamp(1rem, 0.2857rem + 3.5714vw, 2rem);
   --ff-primary: 'Aeroport', sans-serif;
+
+  /* layout */
+  --header-block-size: 3.5rem;
+  --gutter: 1.5rem;
+  --column-gap: 0;
+  --content-max-width: 1280px;
+  --calc-content-max-width: calc(
+    var(--content-max-width) - var(--column-gap) * (var(--column-count) - 1)
+  );
+  --calc-gutter: calc(var(--gutter) - var(--column-gap));
+  --grid-col-max-width: calc(var(--calc-content-max-width) / var(--column-count));
 }
 
 body {
   min-height: 100dvh;
 
   font-family: var(--ff-primary);
-  font-size: clamp(1.25rem, 1.5179rem + -1.3393vw, 0.875rem);
+  font-size: clamp(0.875rem, 0.6071rem + 1.3393vw, 1.25rem);
   font-weight: var(--fw-400);
   line-height: 1.4;
   color: var(--clr-paragraph);
@@ -90,6 +104,8 @@ body {
   :root {
     --input-heigth: 3.75rem;
     --input-border-radius: var(--border-radius);
+    --header-block-size: 6.25rem;
+    --gutter: 2.5rem;
   }
 
   body {

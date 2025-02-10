@@ -1,0 +1,40 @@
+.vd-layout {
+  display: grid;
+  grid-template-columns:
+    [fullbleed-start]
+    minmax(var(--gutter), 1fr)
+    [content-start]
+    minmax(0, var(--content-max-width))
+    [content-end]
+    minmax(var(--gutter), 1fr)
+    [fullbleed-end];
+}
+
+.vd-layout > * {
+  display: grid;
+  grid-column: fullbleed;
+  grid-template-columns: subgrid;
+}
+
+.vd-layout__footer > * {
+  grid-column: content;
+}
+
+@media (width >= 1440px) {
+  .vd-layout {
+    grid-template-columns:
+      [fullbleed-start]
+      minmax(var(--gutter), 1fr)
+      [left-content-start content-start]
+      minmax(0, 560px)
+      [left-content-end]
+      minmax(0, 80px)
+      [center]
+      minmax(0, 80px)
+      [right-content-start]
+      minmax(0, 560px)
+      [right-content-end content-end]
+      minmax(var(--gutter), 1fr)
+      [fullbleed-end];
+  }
+}

@@ -51,3 +51,12 @@
     mask-image: url('/images/icons/close-l.svg');
   }
 }
+
+.button-icon_share::before {
+  mask: no-repeat center / contain url('/images/icons/share-s.svg');
+  transition: var(--transition-sm);
+
+  @media (width >= 768px) {
+    mask-image: url('/images/icons/share-l.svg');
+  }
+}

@@ -1,0 +1,14 @@
+.counter-list {
+  counter-reset: number;
+
+  > li {
+    display: flex;
+    gap: 0.5rem;
+
+    &::before {
+      content: counter(number) '.';
+      counter-increment: number;
+      display: block;
+    }
+  }
+}

@@ -14,6 +14,15 @@
   margin-block-end: 4px;
 }
 
+.text-highlight {
+  background-color: color-mix(in srgb, var(--text-highlight) 25%, transparent);
+}
+
+.text-underline {
+  text-decoration: underline;
+  text-underline-offset: 0.3em;
+}
+
 .sr-only {
   position: absolute;
 

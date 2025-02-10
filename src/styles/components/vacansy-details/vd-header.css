@@ -1,0 +1,35 @@
+.vd-header {
+  min-block-size: var(--header-block-size);
+  background-color: var(--clr-accent);
+
+  > * {
+    display: flex;
+    grid-column: content;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @media (width>=1440px) {
+    position: fixed;
+    z-index: 10;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: transparent;
+
+    .header__logo {
+      display: none;
+    }
+
+    .button-secondary {
+      background-color: var(--clr-bg);
+    }
+
+    > * {
+      display: flex;
+      justify-content: flex-end;
+      inline-size: var(--content-max-width);
+    }
+  }
+}
