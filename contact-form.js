@@ -6,8 +6,21 @@
   var filesToUploadDeleteBtns = document.querySelectorAll('.upload-zone__file > button');
   var successStatusEl = contactFormEl.querySelector('.submit-status');
 
-  var uploadFile = () => {
+  var fileStore = [];
+  var maxFileCount = 2;
+
+  var updateVisualUploadedFiles = () => {
     var { files } = inputFiles;
+
+    files.length === maxFileCount && dropArea.setAttribute('hidden', '');
+    files.length < maxFileCount && dropArea.removeAttribute('hidden', '');
+
+    // clear all
+    [...filesToUpload].forEach((item) => {
+      item.querySelector('p').innerHTML = '';
+      item.setAttribute('hidden', '');
+      item.dataset.name = '';
+    });
 
     [...files].forEach(({ name }, i) => {
       filesToUpload[i].querySelector('p').innerHTML = name;
@@ -16,41 +29,38 @@
     });
   };
 
+  var updateInputFiles = (fileArray) => {
+    inputFiles.files = fileArray.reduce(
+      (dt, f, i) => (dt.items.add(f) && 0) || dt,
+      new DataTransfer(),
+    ).files;
+  };
+
+  var addFiles = () => {
+    var { files } = inputFiles;
+
+    if (fileStore.length + files.length <= maxFileCount) {
+      fileStore.push.apply(fileStore, files);
+
+      updateInputFiles(fileStore);
+      updateVisualUploadedFiles();
+    }
+  };
+
   var removeFile = (e) => {
     var fileName = e.target.parentNode.dataset.name;
     var { files } = inputFiles;
 
-    // remove file from form fileList
-    var files = [...files].filter((file) => file.name != fileName);
+    var deletedIndex = [...files].findIndex((file) => file.name === fileName);
+    fileStore.splice(deletedIndex, 1);
 
-    // update interface
-    filesToUpload.forEach(
-      (fileEl) => fileEl.dataset.name === fileName && fileEl.setAttribute('hidden', ''),
-    );
+    updateInputFiles(fileStore);
+    updateVisualUploadedFiles();
   };
 
-  var dropFile = (e) => {
-    e.preventDefault();
-    inputFiles.files = e.dataTransfer.files;
-    uploadFile();
-  };
-
-  var dragOver = (e) => {
-    e.preventDefault();
-    e.currentTarget.classList.add('drag-hover');
-  };
-
-  var dragLeave = (e) => {
-    e.preventDefault();
-    e.currentTarget.classList.remove('drag-hover');
-  };
+  inputFiles.addEventListener('change', addFiles);
 
   filesToUploadDeleteBtns.forEach((button) => button.addEventListener('click', removeFile));
-
-  inputFiles.addEventListener('change', uploadFile);
-  dropArea.addEventListener('dragover', dragOver);
-  dropArea.addEventListener('dragleave', dragLeave);
-  dropArea.addEventListener('drop', dropFile);
 
   contactFormEl.addEventListener('submit', (e) => {
     e.preventDefault();

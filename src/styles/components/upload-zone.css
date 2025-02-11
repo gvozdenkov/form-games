@@ -4,11 +4,13 @@
 }
 
 .upload-zone__file {
+  overflow: hidden;
   display: flex;
   gap: 0.5rem;
+  align-items: center;
 
   height: var(--input-heigth);
-  padding: 1rem;
+  padding-inline: 1rem;
   border-radius: var(--input-border-radius);
 
   background-color: var(--clr-input-bg);
@@ -16,12 +18,19 @@
   &::before {
     content: '';
 
-    display: block;
-
     inline-size: 1.5rem;
     block-size: 1.5rem;
 
+    white-space: nowrap;
+
     background: no-repeat center / contain url('/images/icons/doc.svg');
+  }
+
+  > p {
+    overflow: hidden;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   > button {

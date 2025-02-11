@@ -101,6 +101,10 @@
     text-align: center;
     text-wrap: balance;
   }
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 .input-group_upload.drag-hover {
