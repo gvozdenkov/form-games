@@ -38,11 +38,27 @@
 }
 
 .card-hiring__form-popover {
-  inline-size: 100vw;
+  translate: 100% 0;
+
+  inline-size: 100%;
   block-size: 100dvh;
   margin: unset;
   padding: 1.5rem;
   border: none;
+
+  transition:
+    translate var(--transition-md),
+    display var(--transition-md),
+    overlay var(--transition-md);
+
+  transition-behavior: allow-discrete;
+
+  &::backdrop {
+    background-color: color-mix(in srgb, var(--clr-accent) 0%, transparent);
+    transition:
+      overlay var(--transition-md),
+      background-color var(--transition-md);
+  }
 
   > hgroup {
     display: grid;
@@ -54,6 +70,23 @@
 
     > button {
       justify-self: end;
+    }
+  }
+
+  &:popover-open {
+    translate: 0 0;
+
+    @starting-style {
+      translate: 100% 0;
+    }
+
+    &::backdrop {
+      background-color: color-mix(in srgb, var(--clr-accent) 70%, transparent);
+
+      /* starting style for overlay transition */
+      @starting-style {
+        background-color: color-mix(in srgb, var(--clr-accent) 0%, transparent);
+      }
     }
   }
 
@@ -69,9 +102,13 @@
     right: 0;
     left: unset;
     inline-size: 50%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition: none;
 
     &::backdrop {
-      background-color: color-mix(in srgb, var(--clr-accent) 70%, transparent);
+      transition: none;
     }
   }
 }
