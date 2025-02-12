@@ -25,6 +25,16 @@
     color: var(--clr-btn-fg-hover);
   }
 
+  &:disabled {
+    cursor: not-allowed;
+    color: var(--clr-btn-fg-disabled);
+    background-color: var(--clr-btn-bg-disabled);
+
+    &:hover {
+      color: var(--clr-btn-fg-disabled);
+    }
+  }
+
   @media (width >= 768px) {
     line-height: 1.4;
   }

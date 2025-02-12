@@ -18,7 +18,8 @@
     transition: var(--transition-sm);
   }
 
-  &:has(input:user-invalid) {
+  &:has(input:user-invalid),
+  &:has([aria-invalid='true']) {
     background-color: var(--clr-input-bg-error);
 
     .input-group__input {
@@ -54,6 +55,13 @@
 
   &:focus {
     outline: none;
+  }
+}
+
+input[type='checkbox'] {
+  &:user-invalid,
+  &[aria-invalid='true'] {
+    background-color: var(--clr-input-bg-error) !important;
   }
 }
 

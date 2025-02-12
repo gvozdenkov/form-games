@@ -29,6 +29,8 @@
   --clr-btn-bg: var(--_clr-black);
   --clr-btn-fg: var(--_clr-white);
   --clr-btn-fg-hover: var(--_clr-violet);
+  --clr-btn-bg-disabled: var(--_clr-black-50);
+  --clr-btn-fg-disabled: var(--_clr-grey-100);
   --clr-btn-bg-accent: var(--_clr-violet);
   --clr-btn-fg-accent: var(--_clr-white);
   --clr-btn-fg-accent-hover: var(--_clr-black);
@@ -59,6 +61,11 @@
   --clr-search-input-fg-hover: var(--clr-accent);
   --clr-search-input-placeholder-hover: var(--clr-accent);
   --input-border-radius: var(--border-radius-sm);
+
+  /* error tooltip */
+  --clr-tooltip-bg: var(--_clr-black);
+  --clr-tooltip-fg: var(--_clr-white);
+  --tooltip-radius: 0.5rem;
 
   /* footer */
   --clr-footer-bg: var(--_clr-black);

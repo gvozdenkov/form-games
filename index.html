@@ -159,87 +159,99 @@
                 class="button-icon button-icon_type_ghost button-icon_close"
                 aria-label="Close menu"></button>
             </hgroup>
-            <form class="contact-form" id="main-contact-form" novalidate>
+            <form class="contact-form" id="main-contact-form">
               <!-- Name -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="first-name" class="sr-only">First name</label>
                 <input
                   type="text"
                   name="name"
-                  aria-label="First name"
                   placeholder="First name"
                   id="first-name"
                   class="input-group__input"
-                  pattern=".{2,}"
-                  required />
+                  required
+                  minlength="2"
+                  pattern="^[\p{L}\-]+$" />
                 <button
                   aria-label="Show error tooltip"
                   popovertarget="first-name-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="first-name-error-hint">You didn't enter a first name</p>
+                <p popover id="first-name-error-hint" class="error-tooltip">
+                  You didn't enter a first name
+                </p>
               </div>
 
               <!-- Last Name -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="last-name" class="sr-only">Last name</label>
                 <input
                   type="text"
                   name="last"
-                  aria-label="Last name"
                   placeholder="Last name"
                   id="last-name"
                   class="input-group__input"
-                  pattern=".{2,}"
-                  required />
+                  required
+                  minlength="2"
+                  pattern="^[\p{L}\-]+$" />
                 <button
                   aria-label="Show error tooltip"
                   popovertarget="last-name-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="last-name-error-hint">You didn't enter a last name</p>
+                <p popover id="last-name-error-hint" class="error-tooltip">
+                  You didn't enter a last name
+                </p>
               </div>
 
               <!-- Email -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="email" class="sr-only">Email</label>
                 <input
                   type="email"
                   name="email"
-                  aria-label="Email"
                   placeholder="Email"
                   id="email"
                   class="input-group__input"
+                  pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
                   required />
                 <button
                   aria-label="Show error tooltip"
                   popovertarget="email-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="email-error-hint">You didn't enter a email name</p>
+                <p popover id="email-error-hint" class="error-tooltip">
+                  You didn't enter a email name
+                </p>
               </div>
 
               <!-- Phone -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="phone" class="sr-only">Phone</label>
                 <input
                   type="tel"
                   name="tel"
-                  aria-label="Phone"
                   placeholder="Phone"
                   id="phone"
                   class="input-group__input"
+                  pattern="^\d+$"
                   required />
                 <button
                   aria-label="Show error tooltip"
                   popovertarget="phone-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="phone-error-hint">You didn't enter a phone name</p>
+                <p popover id="phone-error-hint" class="error-tooltip">
+                  You didn't enter a phone name
+                </p>
               </div>
 
               <!-- Location -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="location" class="sr-only">Location</label>
                 <input
                   type="text"
                   name="location"
-                  aria-label="Location"
                   placeholder="Location"
                   id="location"
                   class="input-group__input"
@@ -249,15 +261,17 @@
                   popovertarget="location-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="location-error-hint">You didn't enter a location name</p>
+                <p popover id="location-error-hint" class="error-tooltip">
+                  You didn't enter a location name
+                </p>
               </div>
 
               <!-- Link -->
-              <div class="input-group">
+              <div class="input-group js-form-group">
+                <label for="linkedin" class="sr-only">Link Linkedin</label>
                 <input
                   type="url"
                   name="linkedin"
-                  aria-label="Link linkedin"
                   placeholder="Link linkedin"
                   id="linkedin"
                   class="input-group__input"
@@ -267,15 +281,17 @@
                   popovertarget="link-error-hint"
                   class="input-group__error-btn"
                   type="button"></button>
-                <p popover id="link-error-hint">You didn't enter a Linkedin</p>
+                <p popover id="link-error-hint" class="error-tooltip">
+                  You didn't enter a Linkedin
+                </p>
               </div>
 
               <!-- About -->
               <div class="input-group">
+                <label for="message" class="sr-only">How did you learn abot this job</label>
                 <input
                   type="text"
                   name="message"
-                  aria-label="How did you learn about this job"
                   placeholder="How did you learn about this job"
                   id="message"
                   class="input-group__input"
@@ -307,11 +323,13 @@
                 </div>
               </div>
 
-              <label class="custom-checkbox">
-                <input type="checkbox" name="agree" id="agree" />
-                By&nbsp;submitting my&nbsp;application&nbsp;I agree that my&nbsp;data is&nbsp;being
-                stored and processed
-              </label>
+              <div class="js-form-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="agree" id="agree" required />
+                  By&nbsp;submitting my&nbsp;application&nbsp;I agree that my&nbsp;data
+                  is&nbsp;being stored and processed
+                </label>
+              </div>
               <button class="button button_type_accent" type="submit">Send</button>
             </form>
           </div>

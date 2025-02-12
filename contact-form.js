@@ -1,3 +1,5 @@
+import { validateForm } from './form-validation';
+
 (() => {
   var contactFormEl = document.querySelector('#main-contact-form');
   var dropArea = contactFormEl.querySelector('.input-group_upload');
@@ -62,18 +64,5 @@
 
   filesToUploadDeleteBtns.forEach((button) => button.addEventListener('click', removeFile));
 
-  contactFormEl.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    var formData = new FormData(contactFormEl);
-
-    fetch('http://localhost:4000/contact', {
-      method: 'post',
-      body: formData,
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        successStatusEl.innerText = data.status && "Thank you! We'll be in touch soon";
-      });
-  });
+  validateForm('#main-contact-form');
 })();
